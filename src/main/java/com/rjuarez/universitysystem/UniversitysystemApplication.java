@@ -31,7 +31,8 @@ public class UniversitysystemApplication {
 			Student student1 = new Student("Rodrigo", "Juarez", "32155738");
 			Student student2 = new Student("Renata", "Juarez", "56661333");
 			Teacher teacher1 = new Teacher("Marina", "Calandra", "33783872", true);
-			Subject subject1 = new Subject("History", LocalTime.now(), 10, teacher1);
+			Subject subject1 = new Subject("History", LocalTime.NOON, 10, teacher1);
+			Subject subject2 = new Subject("Math", LocalTime.MIDNIGHT, 20, teacher1);
 			StudentSubject studentSubject1 = new StudentSubject(student1, subject1);
 			StudentSubject studentSubject2 = new StudentSubject(student2, subject1);
 
@@ -39,6 +40,7 @@ public class UniversitysystemApplication {
 			studentRepository.save(student2);
 			teacherRepository.save(teacher1);
 			subjectRepository.save(subject1);
+			subjectRepository.save(subject2);
 			studentSubjectRepository.save(studentSubject1);
 			studentSubjectRepository.save(studentSubject2);
 		};

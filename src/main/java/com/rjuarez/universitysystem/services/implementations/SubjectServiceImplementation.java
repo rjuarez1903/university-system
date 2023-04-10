@@ -14,6 +14,11 @@ public class SubjectServiceImplementation implements SubjectService {
     SubjectRepository subjectRepository;
 
     @Override
+    public Subject getSubject(Long id) {
+        return subjectRepository.findById(id).orElse(null);
+    }
+
+    @Override
     public List<Subject> getSubjects() {
         return subjectRepository.findAll();
     }
