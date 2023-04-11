@@ -13,7 +13,7 @@ public class SubjectController {
     @Autowired
     SubjectService subjectService;
 
-    @GetMapping("/subject/{id}")
+    @GetMapping("/subjects/{id}")
     public SubjectDTO getSubject(@PathVariable Long id) {
         return subjectService.getSubject(id);
     }

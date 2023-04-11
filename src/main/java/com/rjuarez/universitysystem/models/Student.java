@@ -18,6 +18,8 @@ public class Student {
 
     String dni;
 
+    String file;
+
     @OneToMany(mappedBy = "student", fetch = FetchType.EAGER)
     List<StudentSubject> studentSubjects;
 
@@ -27,6 +29,7 @@ public class Student {
         this.firstName = firstName;
         this.lastName = lastName;
         this.dni = dni;
+        this.file = file;
     }
 
     public void addStudentSubject(StudentSubject studentSubject) {
@@ -50,6 +53,10 @@ public class Student {
         return dni;
     }
 
+    public String getFile() {
+        return file;
+    }
+
     public List<StudentSubject> getStudentSubjects() {
         return studentSubjects;
     }
@@ -68,5 +75,9 @@ public class Student {
 
     public void setStudentSubjects(List<StudentSubject> studentSubjects) {
         this.studentSubjects = studentSubjects;
+    }
+
+    public void setFile(String file) {
+        this.file = file;
     }
 }
