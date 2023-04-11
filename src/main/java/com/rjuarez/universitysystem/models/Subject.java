@@ -57,12 +57,10 @@ public class Subject {
         return maximumStudents;
     }
 
-    @JsonIgnore
     public Teacher getTeacher() {
         return teacher;
     }
 
-    @JsonIgnore
     public List<StudentSubject> getStudentSubjects() {
         return studentSubjects;
     }

@@ -1,11 +1,12 @@
 package com.rjuarez.universitysystem.services;
 
+import com.rjuarez.universitysystem.dtos.SubjectDTO;
 import com.rjuarez.universitysystem.models.Subject;
 
 import java.util.List;
 
 public interface SubjectService {
-    Subject getSubject(Long id);
+    SubjectDTO getSubject(Long id);
 
-    List<Subject> getSubjects();
+    List<SubjectDTO> getSubjects();
 }

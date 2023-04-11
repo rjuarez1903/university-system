@@ -1,6 +1,6 @@
 package com.rjuarez.universitysystem.controllers;
 
-import com.rjuarez.universitysystem.models.Subject;
+import com.rjuarez.universitysystem.dtos.SubjectDTO;
 import com.rjuarez.universitysystem.services.SubjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -14,12 +14,12 @@ public class SubjectController {
     SubjectService subjectService;
 
     @GetMapping("/subject/{id}")
-    public Subject getSubject(@PathVariable Long id) {
+    public SubjectDTO getSubject(@PathVariable Long id) {
         return subjectService.getSubject(id);
     }
 
     @GetMapping("/subjects")
-    public List<Subject> getSubjects() {
+    public List<SubjectDTO> getSubjects() {
         return subjectService.getSubjects();
     }
 
